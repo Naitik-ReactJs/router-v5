@@ -1,0 +1,9 @@
+body {
+  font-size: 1.4rem;
+}
+h1 {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
