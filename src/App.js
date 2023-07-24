@@ -9,7 +9,7 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav className="navbar m-2 navbar-expand-lg navbar-light bg-light border-bottom">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
           <Link to="/" className="navbar-brand mx-5" href="#">
             Naitik.dev
           </Link>
