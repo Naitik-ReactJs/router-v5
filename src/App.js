@@ -55,7 +55,7 @@ export default function App() {
                 aria-label="Search"
               />
               <button
-                className="btn btn-outline-success my-2 my-sm-0"
+                className="btn btn-outline-primary my-2 my-sm-0"
                 type="submit"
               >
                 Search
@@ -67,13 +67,13 @@ export default function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/services">
+          <Route exact path="/services">
             <Services />
           </Route>
-          <Route path="/about">
+          <Route exact path="/about">
             <About />
           </Route>
-          <Route path="/contact">
+          <Route exact path="/contact">
             <Contact />
           </Route>
         </Switch>
