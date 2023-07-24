@@ -9,8 +9,8 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-          <Link className="navbar-brand" href="#">
+        <nav className="navbar m-2 navbar-expand-lg navbar-light bg-light border-bottom">
+          <Link to="/" className="navbar-brand mx-5" href="#">
             Naitik.dev
           </Link>
           <button
@@ -25,23 +25,23 @@ export default function App() {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item ">
+            <ul className="navbar-nav m-auto">
+              <li className="nav-item mx-3">
                 <Link to="/" className="nav-link" href="#">
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item mx-3">
                 <Link to="/services" className="nav-link" href="#">
                   Services
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item mx-3">
                 <Link to="/about" className="nav-link" href="#">
                   About
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item mx-3">
                 <Link to="/contact" className="nav-link" href="#">
                   Contact Me
                 </Link>
@@ -67,10 +67,10 @@ export default function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/services">
+          <Route path="/services">
             <Services />
           </Route>
-          <Route exact path="/about">
+          <Route path="/about">
             <About />
           </Route>
           <Route path="/contact">
