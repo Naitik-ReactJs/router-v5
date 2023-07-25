@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -6,11 +6,49 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import "./App.css";
 export default function App() {
+  let liCollection = [
+    {
+      id: 1,
+      to: "/",
+      name: "Home",
+    },
+    {
+      id: 2,
+      to: "/services",
+      name: "Services",
+    },
+    {
+      id: 3,
+      to: "/about",
+      name: "About",
+    },
+
+    {
+      id: 4,
+      to: "/contact",
+      name: "Contact",
+    },
+  ];
+  const LinksToMap = () => {
+    const link = liCollection.map((liItem) => {
+      return (
+        <Fragment key={liItem.id}>
+          <li className="nav-item mx-3">
+            <Link to={liItem.to} className="nav-link">
+              {liItem.name}
+            </Link>
+          </li>
+        </Fragment>
+      );
+    });
+
+    return <ul className="navbar-nav m-auto">{link}</ul>;
+  };
   return (
     <Router>
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom p-3">
-          <Link to="/" className="navbar-brand mx-5" href="#">
+          <Link to="/" className="navbar-brand mx-5">
             Naitik.dev
           </Link>
           <button
@@ -25,28 +63,8 @@ export default function App() {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav m-auto">
-              <li className="nav-item mx-3">
-                <Link to="/" className="nav-link" href="#">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item mx-3">
-                <Link to="/services" className="nav-link" href="#">
-                  Services
-                </Link>
-              </li>
-              <li className="nav-item mx-3">
-                <Link to="/about" className="nav-link" href="#">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item mx-3">
-                <Link to="/contact" className="nav-link" href="#">
-                  Contact Me
-                </Link>
-              </li>
-            </ul>
+            <LinksToMap />
+
             <form className="form-inline my-2 my-lg-0">
               <input
                 className="form-control mr-sm-2"
