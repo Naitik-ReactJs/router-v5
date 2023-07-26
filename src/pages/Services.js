@@ -1,44 +1,40 @@
 import React from "react";
-import {
-  BrowserRouter as Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import { Link, Switch, Route, useParams } from "react-router-dom";
 
-function Services() {
-  const { path, url } = useRouteMatch();
-
+const Services = () => {
   return (
     <div className="container">
-      <h1>Services </h1>
+      <h1>Services</h1>
       <ul>
         <li>
-          <Link to={`${url}/design`}>Option 1 </Link>
+          <Link to="/services/design">Option 1</Link>
         </li>
         <li>
-          <Link to={`${url}/development`}>Option 2</Link>
+          <Link to="/services/development">Option 2</Link>
         </li>
       </ul>
       <Switch>
-        <Route exact path={path}>
+        <Route exact path="/services">
           <h3>Please select a service</h3>
         </Route>
-        <Route path={`${path}/:serviceId`}>
+        <Route path="/services/:serviceId">
           <ServiceName />
         </Route>
       </Switch>
     </div>
   );
-}
+};
+
 const ServiceName = () => {
-  let { serviceId } = useParams();
+  const { serviceId } = useParams();
+
+  console.log("Service ID:", serviceId); // Add this line to check the value
 
   return (
-    <div className="container">
-      <h3>{serviceId}</h3>
+    <div className="">
+      <h3>Service Name: {serviceId}</h3>
     </div>
   );
 };
+
 export default Services;
