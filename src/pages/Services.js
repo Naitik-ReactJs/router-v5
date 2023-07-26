@@ -1,38 +1,43 @@
 import React from "react";
-import { useRouteMatch } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch,
+} from "react-router-dom";
 
 function Services() {
   const { path, url } = useRouteMatch();
 
   return (
-    <Router>
-      <div className="container">
-        <h1>Services </h1>
-        <ul>
-          <li>
-            <Link to={`${url}/design`}>Option 1 </Link>
-          </li>
-          <li>
-            <Link to={`${url}/development`}>Option 2</Link>
-          </li>
-        </ul>
-        <Switch>
-          <Route path={`${path}/:serviceId`}>
-            <ServiceName />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <div className="container">
+      <h1>Services </h1>
+      <ul>
+        <li>
+          <Link to={`${url}/design`}>Option 1 </Link>
+        </li>
+        <li>
+          <Link to={`${url}/development`}>Option 2</Link>
+        </li>
+      </ul>
+      <Switch>
+        <Route exact path={path}>
+          <h3>Please select a service</h3>
+        </Route>
+        <Route path={`${path}/:serviceId`}>
+          <ServiceName />
+        </Route>
+      </Switch>
+    </div>
   );
 }
 const ServiceName = () => {
   let { serviceId } = useParams();
 
   return (
-    <div>
-      <h3>{serviceId.toUpperCase()}</h3>
+    <div className="container">
+      <h3>{serviceId}</h3>
     </div>
   );
 };
