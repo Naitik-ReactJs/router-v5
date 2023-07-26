@@ -31,8 +31,8 @@ const ServiceName = () => {
   console.log("Service ID:", serviceId); // Add this line to check the value
 
   return (
-    <div className="">
-      <h3>Service Name: {serviceId}</h3>
+    <div >
+      <h3>Service ID: {serviceId}</h3>
     </div>
   );
 };
