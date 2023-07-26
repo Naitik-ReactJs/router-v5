@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import "./App.css";
+
 export default function App() {
   let liCollection = [
     {
@@ -52,7 +53,7 @@ export default function App() {
             Naitik.dev
           </Link>
           <button
-            className="navbar-toggler"
+            class="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -60,7 +61,7 @@ export default function App() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon" />
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <LinksToMap />
