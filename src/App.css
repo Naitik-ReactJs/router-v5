@@ -2,13 +2,11 @@ body {
   background-color: #efefef;
   color: rgb(27, 27, 154);
 }
-li {
-  list-style-type: none;
-}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: calc(100vh - 150px);
+  min-height: calc(90vh - 128px);
 }

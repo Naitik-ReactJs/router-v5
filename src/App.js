@@ -55,7 +55,7 @@ export default function App() {
             Naitik.dev
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -63,14 +63,14 @@ export default function App() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav m-auto">
               {liCollection.map((liItem) => {
                 return (
                   <Fragment key={liItem.id}>
-                    <li className="nav-item mx-3">
+                    <li className="nav-item mx-4">
                       <Link to={liItem.to} className="nav-link">
                         {liItem.name}
                       </Link>
