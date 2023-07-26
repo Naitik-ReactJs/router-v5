@@ -30,21 +30,23 @@ export default function App() {
       name: "Contact",
     },
   ];
-  const LinksToMap = () => {
-    const link = liCollection.map((liItem) => {
-      return (
-        <Fragment key={liItem.id}>
-          <li className="nav-item mx-3">
-            <Link to={liItem.to} className="nav-link">
-              {liItem.name}
-            </Link>
-          </li>
-        </Fragment>
-      );
-    });
+  //   const LinksToMap = () => {
+  //     const link = liCollection.map((liItem) => {
+  //       return (
+  //         <Fragment key={liItem.id}>
+  //           <li className="nav-item mx-3">
+  //             <Link to={liItem.to} className="nav-link">
+  //               {liItem.name}
+  //             </Link>
+  //           </li>
+  //         </Fragment>
+  //       );
+  //     });
 
-    return <ul className="navbar-nav m-auto">{link}</ul>;
-  };
+  //     return <ul className="navbar-nav m-auto">{link}</ul>;
+  //   };
+
+  // use this function we need to use this component more than once
   return (
     <Router>
       <div>
@@ -64,7 +66,19 @@ export default function App() {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <LinksToMap />
+            <ul className="navbar-nav m-auto">
+              {liCollection.map((liItem) => {
+                return (
+                  <Fragment key={liItem.id}>
+                    <li className="nav-item mx-3">
+                      <Link to={liItem.to} className="nav-link">
+                        {liItem.name}
+                      </Link>
+                    </li>
+                  </Fragment>
+                );
+              })}
+            </ul>
 
             <form className="form-inline my-2 my-lg-0">
               <input

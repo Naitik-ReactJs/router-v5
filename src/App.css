@@ -2,6 +2,9 @@ body {
   background-color: #efefef;
   color: rgb(27, 27, 154);
 }
+li {
+  list-style-type: none;
+}
 .container {
   display: flex;
   align-items: center;
