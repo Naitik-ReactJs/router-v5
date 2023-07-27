@@ -2,6 +2,9 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+body{
+  overflow: hidden;
+}
 .container {
   display: flex;
   align-items: center;
@@ -11,10 +14,10 @@
 }
 
 .custom-container {
-  background-color: #f7f7f7;
+  background-color: #efefef;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
@@ -51,4 +54,7 @@
 
 .service-card p {
   color: #555;
+}
+.custom-li{
+  list-style: disc;
 }

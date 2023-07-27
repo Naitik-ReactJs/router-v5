@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import "../App.css";
 const Home = () => {
   return (
-    <Container className="my-5 text-center  custom-container">
+    <Container className="my-5 text-center custom-container">
       <div className="contact-info">
         <p className="lead">
           I love turning design ideas into real things,

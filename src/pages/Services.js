@@ -21,14 +21,14 @@ const Services = () => {
               Serv<span className="text-primary">i</span>ces
             </h1>
             <ul>
-              <li className="mb-3">
+              <li className="mb-3 custom-li">
                 <Link className="text-dark" to={`${url}/design`}>
-                  <h3 className="fw-light"> Option 1 </h3>
+                  <h3 className="fw-light"> Design </h3>
                 </Link>
               </li>
-              <li>
+              <li className="custom-li">
                 <Link className="text-dark" to={`${url}/development`}>
-                  <h3 className="fw-light"> Option 2 </h3>
+                  <h3 className="fw-light"> Development </h3>
                 </Link>
               </li>
             </ul>
@@ -53,19 +53,31 @@ const ServiceName = () => {
   let serviceText;
   if (serviceId === "design") {
     serviceText =
-      "Our design service provides stunning and user-friendly website designs.";
+      "Elevate your online game with our web design service. We'll take your website from meh to magnificent in no time!";
   } else if (serviceId === "development") {
     serviceText =
-      "Our development service brings your ideas to life with custom web applications.";
+      " From web and mobile app development to custom software, we bring your vision to life. Trusted technology partners for success.";
   } else {
     return <NotFound />;
   }
   return (
     <>
-      <div className="service-card m-2 p-5 ">
-        <h3 className="mb-2">What we offer: {serviceId.toUpperCase()}</h3>
-        <p>{serviceText}</p>
+    <div className="col-lg  mb-4">
+    <div className="card custom-services-effect" style={{ width: "auto" }}>
+      <div className="card-body">
+        <div className="icon mb-2">
+    <img src="https://portfolio-naitikbhavsar.netlify.app/img/icons8-html-5-48.png" alt="logo" />
       </div>
+        <div className=" mb-2">
+          <h2 className="text-dark text-uppercase">{serviceId}</h2>
+        </div>
+        <p className="card-text text-dark">
+    {serviceText}
+        </p>
+      </div>
+    </div>
+  </div>
+  
     </>
   );
 };
