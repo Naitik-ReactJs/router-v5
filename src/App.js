@@ -4,10 +4,33 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./App.css";
+import { Fragment } from "react";
 export default function App() {
+  let liCollection = [
+    {
+      id: 1,
+      to: "/",
+      name: "Home",
+    },
+    {
+      id: 2,
+      to: "/services",
+      name: "Services",
+    },
+    {
+      id: 3,
+      to: "/about",
+      name: "About",
+    },
+
+    {
+      id: 4,
+      to: "/contact",
+      name: "Contact",
+    },
+  ];
   return (
     <Router>
       <div>
@@ -28,28 +51,22 @@ export default function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav m-auto">
-              <li className="nav-item mx-4">
-                <Link to="/" className="nav-link">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item mx-4">
-                <Link to="/services" className="nav-link">
-                  Services
-                </Link>
-              </li>
-              <li className="nav-item mx-4">
-                <Link to="/about" className="nav-link">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item mx-4">
-                <Link to="/contact" className="nav-link">
-                  Contact
-                </Link>
-              </li>
+              {liCollection.map((liItem) => {
+                return (
+                  <Fragment key={liItem.id}>
+                    <li className="nav-item mx-3">
+                      <Link to={liItem.to} className="nav-link">
+                        {liItem.name}
+                      </Link>
+                    </li>
+                  </Fragment>
+                );
+              })}
             </ul>
           </div>
+          <button type="button" class="btn btn-dark d-md-block d-none">
+            #
+          </button>
         </nav>
         <Switch>
           <Route exact path="/" component={Home} />
