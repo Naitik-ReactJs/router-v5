@@ -22,3 +22,16 @@ const Contact = () => {
 };
 
 export default Contact;
+// const history = useHistory();
+// ------------------------     useHistory hook        ----------------------------------------
+
+// console.log(history);
+//  <button className="btn btn-primary" onClick={() => history.goBack()}>
+//           Previous
+//         </button>
+//         <button
+//           className="btn btn-primary"
+//           onClick={() => history.push("/services")}
+//         >
+//           Next
+//         </button>

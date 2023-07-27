@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+
 import { Fragment } from "react";
 export default function App() {
   let liCollection = [
@@ -31,6 +32,7 @@ export default function App() {
       name: "Contact",
     },
   ];
+
   return (
     <Router>
       <div>
@@ -64,7 +66,7 @@ export default function App() {
               })}
             </ul>
           </div>
-          <button type="button" class="btn btn-dark d-md-block d-none">
+          <button type="button" class="btn btn-dark d-lg-block d-none">
             #
           </button>
         </nav>

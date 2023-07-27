@@ -11,7 +11,7 @@ import "../App.css";
 
 const Services = () => {
   const { url, path } = useRouteMatch();
-  console.log(url, path);
+  //console.log(url, path);
   return (
     <Container className="my-5 custom-container">
       <Row>
