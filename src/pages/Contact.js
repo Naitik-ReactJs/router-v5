@@ -9,17 +9,17 @@ const Contact = () => {
         Contact <span className="text-primary">Us</span>
       </h1>
       <div className="contact-info d-flex align-items-start flex-column">
-        <p className="mb-3">For any inquiries, please contact us at:</p>
-        <p>
+        <h3 className="mb-3">For any inquiries, please contact us at:</h3>
+        <h6>
           <span className="fw-bold">Phone : </span>{" "}
           <a href="tel:+1234567890">+91 95456 96969</a>
-        </p>
-        <p>
+        </h6>
+        <h6>
           <span className="fw-bold">Email : </span>
           <a href="mailto:naitikb.tagline@gmail.com">
             naitikb.tagline@gmail.com
           </a>
-        </p>
+        </h6>
       </div>
     </Container>
   );

@@ -32,7 +32,9 @@ export default function App() {
       name: "Contact",
     },
   ];
-
+  const NoMatchPage = () => {
+    return <h1 className=" container">404 - Not found</h1>;
+  };
   return (
     <Router>
       <div>
@@ -72,9 +74,10 @@ export default function App() {
         </nav>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/services" component={Services} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
+          <Route exact path="/services" component={Services} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
+          <Route component={NoMatchPage} />
         </Switch>
       </div>
     </Router>

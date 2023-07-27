@@ -29,7 +29,7 @@ const About = () => {
           </div>
           <div className="row">
             <div className="col-md">
-              <p className=" mb-5 mt-3 justify-content-evenly custom-line-height ">
+              <p className="mb-5 mt-3 justify-content-evenly custom-line-height ">
                 I'm <span classname="fw-bold">Naitik Bhavsar </span>
                 passionate about cutting-edge technologies and creating visually
                 stunning interfaces. I believe in the power of exceptional user
