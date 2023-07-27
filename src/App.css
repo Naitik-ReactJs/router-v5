@@ -18,11 +18,7 @@
 }
 
 .contact-info {
-  margin-top: 20px;
   font-size: 18px;
-}
-.contact-info p {
-  margin-bottom: 10px;
 }
 
 .contact-info a {
@@ -32,10 +28,6 @@
 
 .contact-info a:hover {
   text-decoration: underline;
-}
-
-.service-list h1 {
-  margin-bottom: 20px;
 }
 
 .service-list ul {
@@ -51,16 +43,10 @@
   text-decoration: none;
 }
 
-/* Style for the service details card */
 .service-card {
   background-color: #fff;
-  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service-card h3 {
-  margin-bottom: 10px;
 }
 
 .service-card p {

@@ -8,7 +8,7 @@ const Contact = () => {
       <h1 className="lead fs-1 text-uppercase mb-5">
         Contact <span className="text-primary">Us</span>
       </h1>
-      <div className="contact-info d-flex align-items-start flex-column">
+      <div className="contact-info mt-1 d-flex align-items-start flex-column">
         <h3 className="mb-3">For any inquiries, please contact us at:</h3>
         <h6>
           <span className="fw-bold">Phone : </span>{" "}

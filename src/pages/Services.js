@@ -8,27 +8,27 @@ import {
 } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import "../App.css";
-
+import NotFound from "./NotFound";
 const Services = () => {
   const { url, path } = useRouteMatch();
-  console.log(url, path);
+
   return (
-    <Container className="my-5 custom-container">
+    <Container className="my-5 mb-5 custom-container">
       <Row>
         <Col md={12}>
-          <div className="service-list">
-            <h1 className="lead fs-1 text-uppercase">
+          <div className="service-list ">
+            <h1 className="mb-4 fw-light fs-1 text-uppercase">
               Serv<span className="text-primary">i</span>ces
             </h1>
             <ul>
-              <li>
+              <li className="mb-3">
                 <Link className="text-dark" to={`${url}/design`}>
-                  Option 1
+                  <h3 className="fw-light"> Option 1 </h3>
                 </Link>
               </li>
               <li>
                 <Link className="text-dark" to={`${url}/development`}>
-                  Option 2
+                  <h3 className="fw-light"> Option 2 </h3>
                 </Link>
               </li>
             </ul>
@@ -49,8 +49,7 @@ const Services = () => {
 };
 
 const ServiceName = () => {
-  const { serviceId } = useParams();
-  //console.log(serviceId);
+  let { serviceId } = useParams();
   let serviceText;
   if (serviceId === "design") {
     serviceText =
@@ -58,14 +57,18 @@ const ServiceName = () => {
   } else if (serviceId === "development") {
     serviceText =
       "Our development service brings your ideas to life with custom web applications.";
+  } else {
+    return <NotFound />;
   }
-
   return (
-    <div className="service-card">
-      <h3>What we offer: {serviceId.toUpperCase()}</h3>
-      <p>{serviceText}</p>
-    </div>
+    <>
+      <div className="service-card m-2 p-5 ">
+        <h3 className="mb-2">What we offer: {serviceId.toUpperCase()}</h3>
+        <p>{serviceText}</p>
+      </div>
+    </>
   );
 };
 
 export default Services;
+// else block should render the notfound component

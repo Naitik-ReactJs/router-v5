@@ -6,9 +6,9 @@ const NotFound = () => {
   console.log(history);
   console.log(location);
   return (
-    <div className="container my-5 bg-light">
-      <div className="container">
-        <h1> :(</h1>
+    <div className="container my-5  bg-light">
+      <div className="container p-5">
+        <h1> :( </h1>
         <br />
         <h2>
           A 404 error occured, Page not found, check the Path{" "}
