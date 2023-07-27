@@ -5,16 +5,20 @@ import "../App.css";
 const Contact = () => {
   return (
     <Container className="my-5 text-center  custom-container">
-      <h1 className="lead fs-1 text-uppercase">
+      <h1 className="lead fs-1 text-uppercase mb-5">
         Contact <span className="text-primary">Us</span>
       </h1>
-      <div className="contact-info">
-        <p>For any inquiries, please contact us at:</p>
+      <div className="contact-info d-flex align-items-start flex-column">
+        <p className="mb-3">For any inquiries, please contact us at:</p>
         <p>
-          Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+          <span className="fw-bold">Phone : </span>{" "}
+          <a href="tel:+1234567890">+91 95456 96969</a>
         </p>
         <p>
-          Email: <a href="mailto:info@example.com">info@example.com</a>
+          <span className="fw-bold">Email : </span>
+          <a href="mailto:naitikb.tagline@gmail.com">
+            naitikb.tagline@gmail.com
+          </a>
         </p>
       </div>
     </Container>
@@ -22,16 +26,3 @@ const Contact = () => {
 };
 
 export default Contact;
-// const history = useHistory();
-// ------------------------     useHistory hook        ----------------------------------------
-
-// console.log(history);
-//  <button className="btn btn-primary" onClick={() => history.goBack()}>
-//           Previous
-//         </button>
-//         <button
-//           className="btn btn-primary"
-//           onClick={() => history.push("/services")}
-//         >
-//           Next
-//         </button>

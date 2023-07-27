@@ -66,7 +66,7 @@ export default function App() {
               })}
             </ul>
           </div>
-          <button type="button" class="btn btn-dark d-lg-block d-none">
+          <button type="button" className="btn btn-dark d-lg-block d-none">
             #
           </button>
         </nav>
@@ -80,3 +80,17 @@ export default function App() {
     </Router>
   );
 }
+
+// const history = useHistory();
+// ------------------------     useHistory hook        ----------------------------------------
+
+// console.log(history);
+//  <button className="btn btn-primary" onClick={() => history.goBack()}>
+//           Previous
+//         </button>
+//         <button
+//           className="btn btn-primary"
+//           onClick={() => history.push("/services")}
+//         >
+//           Next
+//         </button>
