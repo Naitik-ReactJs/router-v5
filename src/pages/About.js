@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 
 const About = () => {
   return (
-    <Container className="contact-container my-5 text-center">
+    <Container className="custom-container my-5 text-center">
       <div className="row">
         <div className="col my-5 text-center">
           <h1 className="lead fs-1 text-uppercase">
@@ -30,7 +30,6 @@ const About = () => {
           <div className="row">
             <div className="col-md">
               <p className=" mb-5 mt-3 justify-content-evenly custom-line-height ">
-                {" "}
                 I'm <span classname="fw-bold">Naitik Bhavsar </span>
                 passionate about cutting-edge technologies and creating visually
                 stunning interfaces. I believe in the power of exceptional user
@@ -48,8 +47,8 @@ const About = () => {
                   download=""
                   className="btn btn-outline-secondary custom-background text-dark p-3"
                 >
-                  DOWNLOAD RESUME{" "}
-                </a>{" "}
+                  Download Resume
+                </a>
               </button>
             </div>
           </div>

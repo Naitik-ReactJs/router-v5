@@ -4,7 +4,7 @@ import "../App.css";
 
 const Contact = () => {
   return (
-    <Container className="my-5 text-center  contact-container">
+    <Container className="my-5 text-center  custom-container">
       <h1 className="lead fs-1 text-uppercase">
         Contact <span className="text-primary">Us</span>
       </h1>

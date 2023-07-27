@@ -6,7 +6,7 @@
   min-height: calc(90vh - 128px);
 }
 
-.contact-container {
+.custom-container {
   background-color: #f7f7f7;
   padding: 20px;
   border-radius: 8px;
