@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -32,9 +33,7 @@ export default function App() {
       name: "Contact",
     },
   ];
-  const NoMatchPage = () => {
-    return <h1 className=" container">404 - Not found</h1>;
-  };
+
   return (
     <Router>
       <div>
@@ -77,23 +76,9 @@ export default function App() {
           <Route exact path="/services" component={Services} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
-          <Route component={NoMatchPage} />
+          <Route component={NotFound} />
         </Switch>
       </div>
     </Router>
   );
 }
-
-// const history = useHistory();
-// ------------------------     useHistory hook        ----------------------------------------
-
-// console.log(history);
-//  <button className="btn btn-primary" onClick={() => history.goBack()}>
-//           Previous
-//         </button>
-//         <button
-//           className="btn btn-primary"
-//           onClick={() => history.push("/services")}
-//         >
-//           Next
-//         </button>
