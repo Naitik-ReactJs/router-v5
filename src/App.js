@@ -73,10 +73,10 @@ export default function App() {
         </nav>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/services" component={Services} />
+          <Route path="/services" component={Services} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
-          <Route component={NotFound} />
+          <Route exact component={NotFound} />
         </Switch>
       </div>
     </Router>

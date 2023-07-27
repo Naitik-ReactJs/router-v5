@@ -2,15 +2,16 @@ import React from "react";
 import { useHistory, useLocation } from "react-router-dom";
 const NotFound = () => {
   const location = useLocation();
-  console.log(location);
   const history = useHistory();
+  console.log(history);
+  console.log(location);
   return (
     <div className="container my-5 bg-light">
       <div className="container">
         <h1> :(</h1>
         <br />
         <h2>
-          A 404 error occured, Page not found, check the URL{" "}
+          A 404 error occured, Page not found, check the Path{" "}
           <span className="text-danger"> {location.pathname}</span> and try
           again.
         </h2>
