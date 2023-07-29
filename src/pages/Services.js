@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "./Heading";
 import {
   Link,
   Switch,
@@ -17,9 +18,7 @@ const Services = () => {
       <Row>
         <Col md={12}>
           <div className="service-list ">
-            <h1 className="mb-4 fw-light fs-1 text-uppercase">
-              Serv<span className="text-primary">i</span>ces
-            </h1>
+       <Heading  heading = "serv" subhead="i" subheading = "ces"/>
             <ul>
               <li className="mb-3 custom-li">
                 <Link className="text-dark" to={`${url}/design`}>
@@ -66,7 +65,7 @@ const ServiceName = () => {
     <div className="card custom-services-effect" style={{ width: "auto" }}>
       <div className="card-body">
         <div className="icon mb-2">
-    <img src="https://portfolio-naitikbhavsar.netlify.app/img/icons8-html-5-48.png" alt="logo" />
+      <span > <i className="bi bi-code-slash fs-3"></i></span>
       </div>
         <div className=" mb-2">
           <h2 className="text-dark text-uppercase">{serviceId}</h2>
