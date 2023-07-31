@@ -2,14 +2,15 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 import "../App.css";
-import Heading from "./Heading";
 
 const About = () => {
   return (
     <Container className="my-5 text-center custom-container">
       <Row>
         <Col className="my-5 text-center">
-       <Heading heading = "About "  subhead="me"/>
+          <h1 className="lead fs-1 text-uppercase">
+            About <span className="text-primary">me</span>
+          </h1>
         </Col>
       </Row>
       <Row>
@@ -28,7 +29,7 @@ const About = () => {
           </Row>
           <Row>
             <Col md>
-              <p className="mt-3 justify-content-center">
+              <p className="mt-3 justify-content-evenly">
                 I'm <span className="fw-bold">Naitik Bhavsar</span> passionate about
                 cutting-edge technologies and creating visually stunning interfaces. I
                 believe in the power of exceptional user experiences and I strive to

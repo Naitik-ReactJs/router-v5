@@ -7,7 +7,7 @@ const Home = () => {
       <div className="contact-info">
         <p className="lead">
           I love turning design ideas into real things,
-          <span className="d-block mt-1">making imagination come to life.</span>
+          <span className="d-block lh-5">making imagination come to life.</span>
         </p>
       </div>
     </Container>

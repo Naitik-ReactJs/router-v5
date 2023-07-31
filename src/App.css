@@ -25,13 +25,12 @@ body{
 }
 
 .contact-info a {
-  color: #000;
+  color: rgb(86, 86, 86);
   text-decoration: none;
 }
 
 .contact-info a:hover {
-  
-  color: #000000c6;
+  text-decoration: underline;
 }
 
 .service-list ul {
@@ -59,32 +58,3 @@ body{
 .custom-li{
   list-style: disc;
 }
-/* 
---------------------------------- */
-
-
-
-
-
-
-
-.custom-letter-spacing {
-  letter-spacing: 0.5rem;
-}
-
-.custom-line-height {
-  line-height: 1.8rem;
-}
-
-.text-insta {
-  color: #000;
-}
-
-.social-hover {
-  transition: 0.5s;
-}
-
-.social-hover:hover {
-  transform: translateY(-10px);
-}
-
