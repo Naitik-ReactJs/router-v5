@@ -42,5 +42,8 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3"
-  }
+  },
+  "plugins": [
+    "@babel/plugin-proposal-export-default-from"
+  ]
 }
